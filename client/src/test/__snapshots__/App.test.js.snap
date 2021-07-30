@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar bg-dark"
+  >
+    <h1>
+      <a
+        href="/"
+      >
+        <i
+          class="fas fa-code"
+        />
+         Event Organizer
+      </a>
+    </h1>
+    <ul>
+      <li>
+        <a
+          href="/register"
+        >
+          Register
+        </a>
+      </li>
+      <li>
+        <a
+          href="/login"
+        >
+          Login
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section
+    class="landing"
+  >
+    <div
+      class="dark-overlay"
+    >
+      <div
+        class="landing-inner"
+      >
+        <h1
+          class="x-large"
+        >
+          Property Finder
+        </h1>
+        <p
+          class="lead"
+        >
+          Create an account to see properties
+        </p>
+        <div
+          class="buttons"
+        >
+          <a
+            class="btn btn-primary"
+            href="/register"
+          >
+            Sign Up
+          </a>
+          <a
+            class="btn btn-light"
+            href="/login"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
