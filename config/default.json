@@ -1,4 +1,5 @@
 {
   "mongoURI": "mongodb+srv://isharaabc:isharaabc@propertydata.zks2r.mongodb.net/propertyData?retryWrites=true&w=majority",
-  "jwtSecret": "c5d406b69eb57c89849b7023888b47d0c442ce3a3d66c4cf7730f200ff324c62e0b3d5"
+  "jwtSecret": "c5d406b69eb57c89849b7023888b47d0c442ce3a3d66c4cf7730f200ff324c62e0b3d5",
+  "testMongoURI": "mongodb+srv://isharaabc:isharaabc@propertydata.zks2r.mongodb.net/propertyData?retryWrites=true&w=majority"
 }

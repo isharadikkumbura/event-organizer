@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 
 app.use(isAuth);
 
+//GraphQL entry point
 app.use(
   '/graphql',
   graphqlHTTP({

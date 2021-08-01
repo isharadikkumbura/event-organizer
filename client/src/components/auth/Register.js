@@ -24,8 +24,29 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    const emailRegex = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/;
+    if (firstName === '') {
+      setAlert('First name is required', 'danger');
+      return;
+    }
+
+    if (email === '' || !emailRegex.test(email)) {
+      setAlert('Please enter a valid email', 'danger');
+      return;
+    }
+    if (password === '' || password2 === '') {
+      setAlert('Please enter pasword fields', 'danger');
+      return;
+    }
+    if (phone === '' || !phone.match(phoneRegex)) {
+      setAlert('Please enter a valid phone number', 'danger');
+      return;
+    }
     if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
+      return;
     } else {
       register({ firstName, lastName, email, phone, password });
     }
@@ -62,7 +83,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         </FormGroup>
         <FormGroup>
           <input
-            type='email'
+            type='text'
             placeholder='Email Address'
             name='email'
             value={email}

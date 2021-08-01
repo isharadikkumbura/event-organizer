@@ -1,4 +1,4 @@
-# GraphQL + React Event Booking API
+# GraphQL + React Event Booking
 
 Install all dependencies
 

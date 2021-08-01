@@ -3,6 +3,8 @@ const User = require('../../models/user');
 
 const { transformEvent } = require('./merge');
 
+//Event resolver, get and create events
+//TODO : Validate Input arguments
 module.exports = {
   events: async (args, req) => {
     if (!req.isAuth) {

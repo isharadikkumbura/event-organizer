@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const User = require('../../models/user');
 
+//Auth resolver: Register, login and load user
+//TODO : Validate Input arguments
 module.exports = {
   createUser: async (args) => {
     try {
@@ -28,6 +30,8 @@ module.exports = {
     }
   },
 
+  //Use email and password to login the user. Return userId, JWT token and tokenExpiration
+
   login: async ({ email, password }) => {
     const user = await User.findOne({ email: email });
     if (!user) {
@@ -46,6 +50,8 @@ module.exports = {
     );
     return { userId: user.id, token: token, tokenExpiration: 1 };
   },
+
+  //Return user by id if authenticated
   loadUser: async (args, req) => {
     if (!req.isAuth) {
       throw new Error('You are not logged in!');
